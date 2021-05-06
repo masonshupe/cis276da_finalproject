@@ -6,10 +6,16 @@ The attached PNG is a MySQL Workbench EER Model based on the computer builder da
 SP_1_MS.sql creates the database and its associated tables.
 
 The database includes 4 tables: parts, prebuilts, parts_required, and orders
+
 parts - tracks available parts inventory; primary key is part_id, includes product upc, price, name, and quantity in stock
+
 prebuilts - tracks available prebuilt computers for sale, primary key is prebuilt_id, includes prebuilt upc and name
+
 parts_required - linking table that tracks the parts needed for a particular prebuilt computer; primary key is preq_id, foreign keys are prebuilt_id and part_id
+
 orders - tracks invoices for a specific customers ordered prebuilts; primary key is order_id, foreign key is prebuilt_id
+
+relationship between tables: parts has a many to many relationship with prebuilts and vice versa; prebuilts has a one to many relationship with orders
 
 SP_4_MS (socket_match) - view that joins prebuilts on parts_required using prebuilt_id and joins on parts using part_id; filters parts where prebuilt name matches the given name and part name matches given cpu manufacturer to present a list of prebuilts that use either an Intel or AMD socket
 
