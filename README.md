@@ -1,5 +1,5 @@
 # cis276da_finalproject
-Computer building website database design with relevant views
+Computer building website database design with useful queries
 
 This is a project that I completed for my MySQL Database class at Scottsdale Community College (CIS276DA).
 The attached PNG is a MySQL Workbench EER Model based on the computer builder database, "cb".
